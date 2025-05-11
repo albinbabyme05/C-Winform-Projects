@@ -1,4 +1,4 @@
-﻿namespace WinFormApps
+﻿namespace ContactBook
 {
     partial class Form1
     {
@@ -32,130 +32,133 @@
             label2 = new Label();
             label3 = new Label();
             txtName = new TextBox();
-            txtEmail = new TextBox();
             txtPhone = new TextBox();
+            txtEmail = new TextBox();
+            dgvContacts = new DataGridView();
             btnCreate = new Button();
             btnUpdate = new Button();
             btnDelete = new Button();
             btnView = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvContacts).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(23, 48);
+            label1.Location = new Point(26, 46);
             label1.Name = "label1";
-            label1.Size = new Size(45, 15);
+            label1.Size = new Size(56, 20);
             label1.TabIndex = 0;
-            label1.Text = "Name: ";
+            label1.Text = "Name :";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 99);
+            label2.Location = new Point(25, 99);
             label2.Name = "label2";
-            label2.Size = new Size(42, 15);
+            label2.Size = new Size(57, 20);
             label2.TabIndex = 1;
-            label2.Text = "Email: ";
+            label2.Text = "Phone :";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 158);
+            label3.Location = new Point(25, 167);
             label3.Name = "label3";
-            label3.Size = new Size(44, 15);
+            label3.Size = new Size(57, 20);
             label3.TabIndex = 2;
-            label3.Text = "Phone:";
+            label3.Text = "Email : ";
             // 
             // txtName
             // 
-            txtName.Font = new Font("Segoe UI", 12F);
-            txtName.Location = new Point(74, 48);
+            txtName.Location = new Point(110, 43);
             txtName.Name = "txtName";
-            txtName.Size = new Size(166, 29);
+            txtName.Size = new Size(164, 27);
             txtName.TabIndex = 3;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Font = new Font("Segoe UI", 12F);
-            txtEmail.Location = new Point(74, 99);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(166, 29);
-            txtEmail.TabIndex = 4;
             // 
             // txtPhone
             // 
-            txtPhone.Font = new Font("Segoe UI", 12F);
-            txtPhone.Location = new Point(74, 150);
+            txtPhone.Location = new Point(110, 99);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(166, 29);
-            txtPhone.TabIndex = 5;
+            txtPhone.Size = new Size(164, 27);
+            txtPhone.TabIndex = 4;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(110, 164);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(164, 27);
+            txtEmail.TabIndex = 5;
+            // 
+            // dgvContacts
+            // 
+            dgvContacts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvContacts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvContacts.Location = new Point(307, 43);
+            dgvContacts.Name = "dgvContacts";
+            dgvContacts.RowHeadersWidth = 51;
+            dgvContacts.Size = new Size(493, 389);
+            dgvContacts.TabIndex = 6;
             // 
             // btnCreate
             // 
-            btnCreate.Location = new Point(256, 378);
+            btnCreate.Location = new Point(133, 233);
             btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(75, 23);
-            btnCreate.TabIndex = 6;
+            btnCreate.Size = new Size(117, 44);
+            btnCreate.TabIndex = 7;
             btnCreate.Text = "Create Contact";
             btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(624, 378);
+            btnUpdate.Location = new Point(307, 453);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(75, 23);
-            btnUpdate.TabIndex = 7;
-            btnUpdate.Text = "Update Contact";
+            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.TabIndex = 8;
+            btnUpdate.Text = "Update ";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(755, 378);
+            btnDelete.Location = new Point(706, 453);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(75, 23);
-            btnDelete.TabIndex = 8;
-            btnDelete.Text = "Delete Contact";
+            btnDelete.Size = new Size(94, 29);
+            btnDelete.TabIndex = 9;
+            btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnView
             // 
-            btnView.Location = new Point(352, 378);
+            btnView.Location = new Point(518, 453);
             btnView.Name = "btnView";
-            btnView.Size = new Size(75, 23);
-            btnView.TabIndex = 9;
+            btnView.Size = new Size(94, 29);
+            btnView.TabIndex = 10;
             btnView.Text = "View Contact";
             btnView.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(256, 28);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(621, 332);
-            dataGridView1.TabIndex = 10;
+            btnView.Click += btnView_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(912, 467);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(851, 537);
             Controls.Add(btnView);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnCreate);
-            Controls.Add(txtPhone);
+            Controls.Add(dgvContacts);
             Controls.Add(txtEmail);
+            Controls.Add(txtPhone);
             Controls.Add(txtName);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvContacts).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,12 +169,12 @@
         private Label label2;
         private Label label3;
         private TextBox txtName;
-        private TextBox txtEmail;
         private TextBox txtPhone;
+        private TextBox txtEmail;
+        private DataGridView dgvContacts;
         private Button btnCreate;
         private Button btnUpdate;
         private Button btnDelete;
         private Button btnView;
-        private DataGridView dataGridView1;
     }
 }

@@ -1,4 +1,4 @@
-namespace WinFormApps
+namespace ContactBook
 {
     internal static class Program
     {
