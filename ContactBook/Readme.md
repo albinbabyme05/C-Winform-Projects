@@ -21,13 +21,6 @@ A beginner-friendly C# WinForms application that allows users to create, update,
 
 ### 1. Clone this repository
 
-```bash
-git clone link
-cd contactbook-winforms
-
-
-
----
 
 Let me know if you want to add screenshots, developer credits, or deployment notes!
 
